@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chat Demo Application</title>
+    <meta name="title" content="kraken Demo Application">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="robots" content="all">
+    <link rel="shortcut icon" href="">
+    <link rel="stylesheet" type="text/css" media="all" href="./css/index.css">
+</head>
+
+<body>
+<div id="kraken-panel">
+    <div id="kraken-loader">
+        <div class="bulat">
+            <div id="dalbulat">
+                <span>L</span>
+                <span>O</span>
+                <span>A</span>
+                <span>D</span>
+                <span>I</span>
+                <span>N</span>
+                <span>G</span>
+            </div>
+            <div class="luarbulat"></div>
+        </div>
+        <div class="bulat-link"><a href="."></a>
+        </div>
+    </div>
+
+    <div id="kraken-footer">
+        Welcome to <b>Chat Demo Application</b> using <a href="https://github.com/kraken-php/framework">Kraken Framework</a>
+    </div>
+</div>
+
+<div id="kraken-app-panel">
+    <div id="kraken-toolbar" class="demo-toolbar">
+        <div class="chat-toolbar">
+            <label>Logged Users:</label>
+            <div class="chat-users" id="chat-users">
+                <div class="chat-user" id="user-000">#000</div>
+                <div class="chat-user" id="user-250">#250</div>
+            </div>
+        </div>
+    </div>
+    <div class="demo-chatbox">
+        <div id="chat-messagebox" class="chat-messagebox">
+            <div class="chat-message">
+                <div class="info">
+                    <div class="name">User<br>#000</div>
+                    <div class="date">00:00:00</div>
+                </div>
+                <div class="message bubble">If you see this message it means something is not functioning properly.</div>
+            </div>
+        </div>
+        <div id="kraken-inputbox" class="chat-inputbox">
+            <div id="info-user" class="info-user">
+                <div class="info-desc">You are logged in as:</div>
+                <div class="info-name">#000</div>
+                <div class="info-ip">Your IP is: 127.0.0.1</div>
+            </div>
+            <textarea id="chat-text" placeholder="Put your message here..."></textarea>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="./js/index.js"></script>
+</body>
+</html>

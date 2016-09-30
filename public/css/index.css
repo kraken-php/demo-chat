@@ -1,0 +1,466 @@
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Lato Light'), local('Lato-Light'), url(http://fonts.gstatic.com/s/lato/v11/EsvMC5un3kjyUhB9ZEPPwg.woff2) format('woff2');
+}
+html, body
+{
+    background: #f4f4f4;
+    color: #282828;
+    font-size: 16px;
+    font-family: "Lato", Verdana, Tahoma, sans-serif;
+    line-height: 1.5;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+input, textarea
+{
+    font-size: 1rem;
+    font-family: "Lato", Verdana, Tahoma, sans-serif;
+}
+#kraken-panel
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #f4f4f4;
+}
+#kraken-loader
+{
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 632px;
+    height: 100px;
+    text-align: center;
+}
+#kraken-bar
+{
+    display: inline-block;
+    position: relative;
+    left: -1px;
+    border: 1px #000000 solid;
+    border-radius: 6px;
+    width: 232px;
+    height: 20px;
+}
+#kraken-progress
+{
+    border: 2px #f4f4f4 solid;
+    border-radius: 6px;
+    width: 0px;
+    height: 16px;
+}
+#kraken-status
+{
+    height: 24px;
+}
+#kraken-footer
+{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 20px;
+    margin: 0 10px 5px 0;
+}
+.kraken-success
+{
+    color: #000000;
+}
+.kraken-failure
+{
+    color: #dd0000;
+}
+.kraken-bg-success
+{
+    background-color: #000000;
+}
+.kraken-bg-failure
+{
+    background-color: #dd0000;
+}
+#kraken-app-panel
+{
+    position: fixed;
+    display: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #f4f4f4;
+    border-top: 6px solid #6b02af;
+    font-size: 1rem;
+    font-family: sans-serif;
+}
+#demo-app-message
+{
+    border: 2px #009900 dashed;
+    border-radius: 6px;
+    background: #eeffee;
+    color: #006600;
+    line-height: 24px;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 550px;
+    height: 75px;
+    padding: 10px;
+}
+#demo-app-message label
+{
+    display: block;
+    text-align: center;
+    font-weight: bold;
+}
+.demo-toolbar
+{
+    position: relative;
+    border-bottom: 1px solid #e1e1e1;
+    height: 3rem;
+    background: #fff;
+}
+.demo-chatbox
+{
+    position: relative;
+    max-width: 1100px;
+    height: 100%;
+    margin: 0 auto;
+    border-left: 1px solid #e1e1e1;
+    border-right: 1px solid #e1e1e1;
+    padding: 0 1rem;
+    background: #fff;
+    
+}
+.chat-toolbar
+{
+    position: relative;
+    max-width: 1100px;
+    height: 100%;
+    margin: 0 auto;
+}
+.chat-toolbar label
+{
+    display: block;
+    float: left;
+    font-weight: bold;
+    font-size: 1rem;
+    padding-top: 0.65rem;
+}
+.chat-toolbar .chat-users
+{
+    display: block;
+    float: left;
+    margin-left: 1rem;
+    margin-top: 0.5rem;
+}
+.chat-toolbar .chat-users .chat-user
+{
+    float: left;
+    background: #6b02af;
+    height: 1rem;
+    width: 2rem;
+    margin: 0px 0.25rem;
+    padding: 0.5rem 0;
+    font-size: 10px;
+    color: #FFF;
+    text-align: center;
+}
+.chat-message
+{
+    position: relative;
+    font-family: "Lato", Verdana, Tahoma, sans-serif;
+    margin: 0.5rem 0;
+    overflow: auto;
+}
+.chat-message .info
+{
+    float: left;
+    width: 4rem;
+}
+.chat-message .name
+{
+    background: #6b02af;
+    position: relative;
+    font-size: 12px;
+    width: 3rem;
+    height: 44px;
+    padding-top: 4px;
+    text-align: center;
+}
+.chat-message .date
+{
+    position: relative;
+    font-size: 12px;
+    color: #797979;
+    width: 3rem;
+}
+.chat-message .message
+{
+    position: relative;
+    margin-left: 0.5rem;
+    float: left;
+    font-size: 12px;
+}
+.chat-messagebox
+{
+    position: relative;
+    /*height: 74%;*/
+    width: 100%;
+    overflow-y: auto;
+}
+.chat-inputbox
+{
+    position: relative;
+    width: 100%;
+    border-top: 1px #e1e1e1 solid;
+    padding: 0.5rem 0;
+    font-family: "Lato", Verdana, Tahoma, sans-serif;
+    height: 170px;
+}
+.chat-inputbox .info-user
+{
+    float: left;
+    width: 150px;
+    height: 170px;
+    text-align: center;
+    font-size: 1rem;
+}
+.chat-inputbox .info-name
+{
+    display: inline-block;
+    width: 100px;
+    height: 78px;
+    background: #6b02af;
+    color: rgb(250, 250, 250);
+    font-size: 2rem;
+    text-align: center;
+    padding-top: 22px;
+    margin: 0.5rem 0;
+}
+.chat-inputbox textarea
+{
+    float: left;
+    margin: 0;
+    padding: 0.5rem 0;
+    width: 900px;
+    height: 154px;
+    font-size: 12pt;
+    border: 0;
+    resize: none;
+    margin-left: 20px;
+    padding-left: 25px;
+    border-left: 1px solid #e1e1e1;
+}
+.bulat-link
+{
+    position: absolute;
+    bottom: 0.5em;
+    right: 0.5em;
+    color: #000;
+}
+.bulat-link a
+{
+    color: #000;
+    text-decoration: none;
+}
+.bulat
+{
+    width: 100px;
+    height: 100px;
+    position: relative;
+    margin: 0px auto;
+    cursor: pointer;
+    border-radius: 110px;
+    -webkit-border-radius: 110px;
+}
+#dalbulat
+{
+    background-color: #f4f4f4;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    z-index: 2;
+    border-radius: 110px;
+    text-align: center;
+    font-size:10px;
+    color:#000;
+    line-height: 90px;
+}
+.luarbulat
+{
+    margin: 0 auto;
+    background: #ab02ef;
+    background: -webkit-radial-gradient(20% 20%, ellipse cover, #ab02ef 0%, #6b02af 24%, transparent 74%, transparent 100%);
+    background: radial-gradient(ellipse at 20% 20%, #ab02ef 0%, #6b02af 24%, transparent 74%, transparent 100%);
+    border-radius: 110px;
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    -webkit-animation-name: rotate;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-name: rotate;
+    -moz-animation-duration: 1s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+    animation-name: rotate;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+#dalbulat span
+{
+    -webkit-animation:color 1.5s linear infinite;
+    -moz-animation:color 1.5s linear infinite;
+    -ms-animation:color 1.5s linear infinite;
+    -o-animation:color 1.5s linear infinite;
+    animation:color 1.5s linear infinite;
+}
+#dalbulat span:nth-child(1)
+{
+    -webkit-animation-delay:0s;
+    -moz-animation-delay:0s;
+    -ms-animation-delay:0s;
+    -o-animation-delay:0s;
+    animation-delay:0s;
+}
+#dalbulat span:nth-child(2)
+{
+    -webkit-animation-delay:.25s;
+    -moz-animation-delay:.25s;
+    -ms-animation-delay:.25s;
+    -o-animation-delay:.25s;
+    animation-delay:.25s;
+}
+#dalbulat span:nth-child(3)
+{
+    -webkit-animation-delay:.45s;
+    -moz-animation-delay:.45s;
+    -ms-animation-delay:.45s;
+    -o-animation-delay:.45s;
+    animation-delay:.45s;
+}
+#dalbulat span:nth-child(4)
+{
+    -webkit-animation-delay:.55s;
+    -moz-animation-delay:.55s;
+    -ms-animation-delay:.55s;
+    -o-animation-delay:.55s;
+    animation-delay:.55s;
+}
+#dalbulat span:nth-child(5)
+{
+    -webkit-animation-delay:.65s;
+    -moz-animation-delay:.65s;
+    -ms-animation-delay:.65s;
+    -o-animation-delay:.65s;
+    animation-delay:.65s;
+}
+#dalbulat span:nth-child(6)
+{
+    -webkit-animation-delay:.75s;
+    -moz-animation-delay:.75s;
+    -ms-animation-delay:.75s;
+    -o-animation-delay:.75s;
+    animation-delay:.75s;
+}
+#dalbulat span:nth-child(7)
+{
+    -webkit-animation-delay:.85s;
+    -moz-animation-delay:.85s;
+    -ms-animation-delay:.85s;
+    -o-animation-delay:.85s;
+    animation-delay:.85s;
+}
+@-webkit-keyframes rotate
+{
+    from {
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@-moz-keyframes rotate
+{
+    from {
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@keyframes rotate
+{
+    from {
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@-webkit-keyframes color
+{
+    0% {
+        color:#f4f4f4;
+    }
+    50% {
+        color:transparent;
+    }
+    100% {
+        color:#f4f4f4;
+    }
+}
+.bubble
+{
+    position: relative;
+    padding: 10px 15px;
+    border: 1px solid #e1e1e1;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    margin-top: 5px;
+}
+
+.bubble:after
+{
+    content: '';
+    position: absolute;
+    border-style: solid;
+    border-width: 6px 12px 6px 0;
+    border-color: transparent #e1e1e1;
+    display: block;
+    width: 0;
+    z-index: 1;
+    left: -12px;
+    top: 12px;
+}
