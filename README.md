@@ -1,6 +1,6 @@
 # Kraken Demo Application - Chat
 
-[![Total Downloads](https://poser.pugx.org/kraken-php/kraken/downloads)](https://packagist.org/packages/kraken-php/demo-chat) 
+[![Total Downloads](https://poser.pugx.org/kraken-php/demo-chat/downloads)](https://packagist.org/packages/kraken-php/demo-chat) 
 [![Latest Stable Version](https://poser.pugx.org/kraken-php/framework/v/stable)](https://packagist.org/packages/kraken-php/framework) 
 [![Latest Unstable Version](https://poser.pugx.org/kraken-php/framework/v/unstable)](https://packagist.org/packages/kraken-php/framework) 
 [![License](https://poser.pugx.org/kraken-php/framework/license)](https://packagist.org/packages/kraken-php/framework)
