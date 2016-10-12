@@ -140,7 +140,6 @@ input, textarea
     border-right: 1px solid #e1e1e1;
     padding: 0 1rem;
     background: #fff;
-    
 }
 .chat-toolbar
 {
@@ -215,7 +214,6 @@ input, textarea
 .chat-messagebox
 {
     position: relative;
-    /*height: 74%;*/
     width: 100%;
     overflow-y: auto;
 }
