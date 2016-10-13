@@ -52,22 +52,22 @@ Documentation for the framework can be found in the [official documentation][2] 
 
 To start project, first run `kraken.server` instance.
 
-    $> kraken.server
+    $> php kraken.server
 
 Then, check if connection is working in another terminal window:
 
-    $> kraken server:ping
+    $> php kraken server:ping
 
 If everything works correctly, as final step run the application using:
 
-    $> kraken project:create
+    $> php kraken project:create
 
 After project has been created successfully, go to `http://localhost:6080` address in your browser and you should be able
 to see and use examplary chat.
 
 To close whole project, use:
 
-    $> kraken project:destroy
+    $> php kraken project:destroy
 
 If you have problems with configuring console-server connection, you can also try alternative start.
 
